@@ -1,329 +1,306 @@
 {
   "funds": [
     {
-      "ticker": "XIU",
-      "name": "iShares S&P/TSX 60 ETF",
-      "sleeve": "Canadian Equity",
-      "benchmark": "S&P/TSX 60",
-      "yield": 2.8,
-      "mer": 0.18,
-      "distFreq": "Monthly",
-      "distType": "Eligible Dividends",
-      "calYear": {
-        "2024": 18.5, "2023": 11.8, "2022": -5.8, "2021": 21.7, "2020": 2.1,
-        "2019": 22.9, "2018": -8.9, "2017": 9.1,  "2016": 21.1, "2015": -8.3
-      }
-    },
-    {
       "ticker": "XIC",
       "name": "iShares Core S&P/TSX Capped Composite ETF",
-      "sleeve": "Canadian Equity",
+      "yahooTicker": "XIC.TO",
+      "sleeve": "Passive Equity",
       "benchmark": "S&P/TSX Comp.",
       "yield": 2.6,
       "mer": 0.06,
       "distFreq": "Monthly",
       "distType": "Eligible Dividends",
+      "inceptionNote": null,
       "calYear": {
-        "2024": 18.2, "2023": 11.6, "2022": -5.5, "2021": 22.0, "2020": 2.5,
-        "2019": 22.6, "2018": -8.5, "2017": 9.4,  "2016": 21.4, "2015": -8.1
+        "2024": null, "2023": null, "2022": null, "2021": null, "2020": null,
+        "2019": null, "2018": null, "2017": null, "2016": null, "2015": null
       }
     },
     {
-      "ticker": "VCN",
-      "name": "Vanguard FTSE Canada All Cap ETF",
-      "sleeve": "Canadian Equity",
-      "benchmark": "FTSE Canada AC",
-      "yield": 2.7,
-      "mer": 0.05,
-      "distFreq": "Monthly",
-      "distType": "Eligible Dividends",
-      "calYear": {
-        "2024": 18.0, "2023": 11.5, "2022": -5.4, "2021": 21.9, "2020": 2.4,
-        "2019": 22.5, "2018": -8.3, "2017": 9.3,  "2016": 21.2, "2015": -8.0
-      }
-    },
-    {
-      "ticker": "ZCN",
-      "name": "BMO S&P/TSX Capped Composite ETF",
-      "sleeve": "Canadian Equity",
-      "benchmark": "S&P/TSX Comp.",
-      "yield": 2.5,
-      "mer": 0.06,
-      "distFreq": "Monthly",
-      "distType": "Eligible Dividends",
-      "calYear": {
-        "2024": 18.1, "2023": 11.4, "2022": -5.5, "2021": 21.8, "2020": 2.3,
-        "2019": 22.4, "2018": -8.4, "2017": 9.2,  "2016": 21.1, "2015": -8.1
-      }
-    },
-    {
-      "ticker": "XAW",
-      "name": "iShares Core MSCI All Country World ex Canada ETF",
-      "sleeve": "Global Equity",
-      "benchmark": "MSCI ACWI ex-CA",
-      "yield": 1.4,
-      "mer": 0.22,
-      "distFreq": "Semi-Annual",
-      "distType": "Foreign Income",
-      "calYear": {
-        "2024": 24.1, "2023": 18.4, "2022": -15.2, "2021": 26.8, "2020": 14.0,
-        "2019": 23.5, "2018": -7.2, "2017": 15.5,  "2016": 5.8,  "2015": 20.2
-      }
-    },
-    {
-      "ticker": "VXC",
-      "name": "Vanguard FTSE Global All Cap ex Canada ETF",
-      "sleeve": "Global Equity",
-      "benchmark": "FTSE Global AC",
-      "yield": 1.6,
-      "mer": 0.22,
+      "ticker": "XSP",
+      "name": "iShares Core S&P 500 Index ETF (CAD-Hedged)",
+      "yahooTicker": "XSP.TO",
+      "sleeve": "Passive Equity",
+      "benchmark": "S&P 500 (CAD Hedged)",
+      "yield": 1.1,
+      "mer": 0.10,
       "distFreq": "Quarterly",
       "distType": "Foreign Income",
+      "inceptionNote": null,
       "calYear": {
-        "2024": 23.8, "2023": 18.1, "2022": -15.0, "2021": 26.5, "2020": 13.8,
-        "2019": 23.2, "2018": -7.0, "2017": 15.2,  "2016": 5.6,  "2015": 19.9
+        "2024": null, "2023": null, "2022": null, "2021": null, "2020": null,
+        "2019": null, "2018": null, "2017": null, "2016": null, "2015": null
       }
     },
     {
-      "ticker": "XEQT",
-      "name": "iShares Core Equity ETF Portfolio",
-      "sleeve": "Global Equity",
-      "benchmark": "Global Blend",
-      "yield": 1.8,
-      "mer": 0.20,
+      "ticker": "VIU",
+      "name": "Vanguard FTSE Developed All Cap ex North America ETF",
+      "yahooTicker": "VIU.TO",
+      "sleeve": "Passive Equity",
+      "benchmark": "FTSE Developed ex NA",
+      "yield": 2.8,
+      "mer": 0.23,
       "distFreq": "Quarterly",
       "distType": "Foreign Income",
+      "inceptionNote": null,
       "calYear": {
-        "2024": 21.5, "2023": 16.8, "2022": -11.5, "2021": 24.1, "2020": 8.5,
-        "2019": null,  "2018": null,  "2017": null,   "2016": null,  "2015": null
+        "2024": null, "2023": null, "2022": null, "2021": null, "2020": null,
+        "2019": null, "2018": null, "2017": null, "2016": null, "2015": null
       }
     },
     {
-      "ticker": "ZSP",
-      "name": "BMO S&P 500 ETF",
-      "sleeve": "Global Equity",
-      "benchmark": "S&P 500 (CAD)",
-      "yield": 1.2,
-      "mer": 0.09,
-      "distFreq": "Monthly",
+      "ticker": "VEE",
+      "name": "Vanguard FTSE Emerging Markets All Cap ETF",
+      "yahooTicker": "VEE.TO",
+      "sleeve": "Passive Equity",
+      "benchmark": "FTSE Emerging Markets",
+      "yield": 2.4,
+      "mer": 0.24,
+      "distFreq": "Quarterly",
       "distType": "Foreign Income",
+      "inceptionNote": null,
       "calYear": {
-        "2024": 34.5, "2023": 24.1, "2022": -12.5, "2021": 30.1, "2020": 17.8,
-        "2019": 27.6, "2018": -2.1, "2017": 14.2,  "2016": 9.5,  "2015": 23.5
+        "2024": null, "2023": null, "2022": null, "2021": null, "2020": null,
+        "2019": null, "2018": null, "2017": null, "2016": null, "2015": null
+      }
+    },
+    {
+      "ticker": "FINN",
+      "name": "Fidelity Global Innovators ETF",
+      "yahooTicker": "FINN.NE",
+      "sleeve": "Active Equity",
+      "benchmark": "MSCI ACWI",
+      "yield": 0.0,
+      "mer": 0.65,
+      "distFreq": "Annual",
+      "distType": "Capital Gains",
+      "inceptionNote": "Cal year returns reflect Fidelity Global Innovators Fund Series F prior to ETF conversion",
+      "calYear": {
+        "2024": 60.55, "2023": 46.69, "2022": -29.65, "2021": 4.08, "2020": 95.03,
+        "2019": 41.32, "2018": -4.61, "2017": null, "2016": null, "2015": null
+      }
+    },
+    {
+      "ticker": "FLSA",
+      "name": "Fidelity Long/Short Alternative ETF",
+      "yahooTicker": "FLSA.NE",
+      "sleeve": "Alternatives",
+      "benchmark": "FTSE Canada 91 Day T-Bill",
+      "yield": 0.0,
+      "mer": 0.85,
+      "distFreq": "Annual",
+      "distType": "Capital Gains",
+      "inceptionNote": "Cal year returns reflect Fidelity Long/Short Alternative Fund Series F prior to ETF conversion",
+      "calYear": {
+        "2024": 20.83, "2023": 15.05, "2022": -4.73, "2021": 28.84, "2020": null,
+        "2019": null, "2018": null, "2017": null, "2016": null, "2015": null
+      }
+    },
+    {
+      "ticker": "FCGS",
+      "name": "Fidelity Global Small Cap Opportunities ETF",
+      "yahooTicker": "FCGS.NE",
+      "sleeve": "Active Equity",
+      "benchmark": "MSCI World Small Cap",
+      "yield": 0.0,
+      "mer": 0.65,
+      "distFreq": "Annual",
+      "distType": "Capital Gains",
+      "inceptionNote": "Cal year returns reflect Fidelity Global Small Cap Opportunities Fund Series F prior to ETF conversion",
+      "calYear": {
+        "2024": 28.95, "2023": 24.62, "2022": null, "2021": null, "2020": null,
+        "2019": null, "2018": null, "2017": null, "2016": null, "2015": null
+      }
+    },
+    {
+      "ticker": "PYF",
+      "name": "Purpose Premium Yield Fund",
+      "yahooTicker": "PYF.TO",
+      "sleeve": "Alternatives",
+      "benchmark": "FTSE Canada 91 Day T-Bill",
+      "yield": 7.8,
+      "mer": 1.20,
+      "distFreq": "Monthly",
+      "distType": "ROC + Dividends",
+      "inceptionNote": null,
+      "calYear": {
+        "2024": null, "2023": null, "2022": null, "2021": null, "2020": null,
+        "2019": null, "2018": null, "2017": null, "2016": null, "2015": null
       }
     },
     {
       "ticker": "NSDI",
       "name": "NBI SmartData International Equity ETF",
-      "sleeve": "Global Equity",
+      "yahooTicker": "NSDI.TO",
+      "sleeve": "Active Equity",
       "benchmark": "MSCI EAFE",
       "yield": 2.1,
       "mer": 0.45,
       "distFreq": "Semi-Annual",
       "distType": "Foreign Income",
+      "inceptionNote": "Cal year returns reflect NBI SmartData International Equity Fund Series F (NBC791) — ETF launched September 2025",
       "calYear": {
-        "2024": 18.8, "2023": 16.2, "2022": -13.5, "2021": 21.1, "2020": 9.2,
-        "2019": 22.1, "2018": -9.8, "2017": 17.8,  "2016": null,  "2015": null
+        "2024": 14.19, "2023": 16.43, "2022": -7.13, "2021": 10.61, "2020": 3.72,
+        "2019": 13.55, "2018": -8.86, "2017": 16.60, "2016": -1.62, "2015": null
       }
     },
     {
-      "ticker": "XBB",
-      "name": "iShares Core Canadian Universe Bond ETF",
-      "sleeve": "Fixed Income",
-      "benchmark": "FTSE Canada Univ Bond",
-      "yield": 3.2,
-      "mer": 0.10,
+      "ticker": "TGED",
+      "name": "TD Active Global Enhanced Dividend ETF",
+      "yahooTicker": "TGED.TO",
+      "sleeve": "Active Equity",
+      "benchmark": "MSCI World",
+      "yield": 3.8,
+      "mer": 0.55,
       "distFreq": "Monthly",
-      "distType": "Interest",
+      "distType": "Foreign Income + Dividends",
+      "inceptionNote": null,
       "calYear": {
-        "2024": 2.1,  "2023": 7.4,  "2022": -11.7, "2021": -3.0, "2020": 8.7,
-        "2019": 6.8,  "2018": 1.4,  "2017": 2.5,   "2016": 1.7,  "2015": 3.5
+        "2024": null, "2023": null, "2022": null, "2021": null, "2020": null,
+        "2019": null, "2018": null, "2017": null, "2016": null, "2015": null
       }
     },
     {
-      "ticker": "ZAG",
-      "name": "BMO Aggregate Bond Index ETF",
-      "sleeve": "Fixed Income",
-      "benchmark": "FTSE Canada Univ Bond",
-      "yield": 3.3,
-      "mer": 0.09,
-      "distFreq": "Monthly",
-      "distType": "Interest",
-      "calYear": {
-        "2024": 2.0,  "2023": 7.2,  "2022": -11.5, "2021": -3.1, "2020": 8.5,
-        "2019": 6.6,  "2018": 1.3,  "2017": 2.4,   "2016": 1.6,  "2015": 3.4
-      }
-    },
-    {
-      "ticker": "VSB",
-      "name": "Vanguard Canadian Short-Term Bond ETF",
-      "sleeve": "Fixed Income",
-      "benchmark": "FTSE Canada ST Bond",
-      "yield": 3.6,
-      "mer": 0.11,
-      "distFreq": "Monthly",
-      "distType": "Interest",
-      "calYear": {
-        "2024": 4.1,  "2023": 5.5,  "2022": -4.2,  "2021": 0.2,  "2020": 5.1,
-        "2019": 3.5,  "2018": 1.8,  "2017": 0.8,   "2016": 1.2,  "2015": 2.1
-      }
-    },
-    {
-      "ticker": "XSB",
-      "name": "iShares Core Canadian Short Term Bond ETF",
-      "sleeve": "Fixed Income",
-      "benchmark": "FTSE Canada ST Bond",
-      "yield": 3.5,
-      "mer": 0.10,
-      "distFreq": "Monthly",
-      "distType": "Interest",
-      "calYear": {
-        "2024": 4.0,  "2023": 5.4,  "2022": -4.1,  "2021": 0.1,  "2020": 5.0,
-        "2019": 3.4,  "2018": 1.7,  "2017": 0.7,   "2016": 1.1,  "2015": 2.0
-      }
-    },
-    {
-      "ticker": "ZWEN",
-      "name": "BMO Canadian High Dividend Covered Call ETF",
-      "sleeve": "Income ETF",
-      "benchmark": "S&P/TSX Energy",
-      "yield": 8.5,
-      "mer": 0.65,
-      "distFreq": "Monthly",
-      "distType": "ROC + Dividends",
-      "calYear": {
-        "2024": 12.1, "2023": 5.4,  "2022": 18.2,  "2021": 35.1, "2020": -20.3,
-        "2019": 8.7,  "2018": -17.4,"2017": null,   "2016": null,  "2015": null
-      }
-    },
-    {
-      "ticker": "ENCC",
-      "name": "Horizons Enhanced Income Energy ETF",
-      "sleeve": "Income ETF",
-      "benchmark": "S&P/TSX Energy",
-      "yield": 9.2,
-      "mer": 0.87,
-      "distFreq": "Monthly",
-      "distType": "ROC + Dividends",
-      "calYear": {
-        "2024": 10.8, "2023": 4.9,  "2022": 17.5,  "2021": 33.8, "2020": -21.0,
-        "2019": null,  "2018": null,  "2017": null,   "2016": null,  "2015": null
-      }
-    },
-    {
-      "ticker": "NXF",
-      "name": "CI Energy Giants Covered Call ETF",
-      "sleeve": "Income ETF",
-      "benchmark": "Global Energy",
-      "yield": 8.8,
-      "mer": 0.65,
-      "distFreq": "Monthly",
-      "distType": "ROC + Dividends",
-      "calYear": {
-        "2024": 14.2, "2023": 6.8,  "2022": 20.1,  "2021": 37.5, "2020": -19.5,
-        "2019": 9.2,  "2018": null,  "2017": null,   "2016": null,  "2015": null
-      }
-    },
-    {
-      "ticker": "NDIV",
-      "name": "Harvest Diversified Monthly Income ETF",
-      "sleeve": "Income ETF",
-      "benchmark": "Multi-Asset Blend",
-      "yield": 7.6,
-      "mer": 0.80,
-      "distFreq": "Monthly",
-      "distType": "ROC + Dividends",
-      "calYear": {
-        "2024": 8.5,  "2023": 7.1,  "2022": -4.2,  "2021": 14.8, "2020": -6.1,
-        "2019": null,  "2018": null,  "2017": null,   "2016": null,  "2015": null
-      }
-    },
-    {
-      "ticker": "MLPD",
-      "name": "Hamilton Enhanced Multi-Sector Covered Call ETF",
-      "sleeve": "Income ETF",
-      "benchmark": "Multi-Asset Blend",
-      "yield": 10.2,
-      "mer": 0.65,
-      "distFreq": "Monthly",
-      "distType": "ROC + Dividends",
-      "calYear": {
-        "2024": 11.5, "2023": 8.2,  "2022": 5.5,   "2021": 25.0, "2020": null,
-        "2019": null,  "2018": null,  "2017": null,   "2016": null,  "2015": null
-      }
-    },
-    {
-      "ticker": "BIP.UN",
-      "name": "Brookfield Infrastructure Partners LP",
-      "sleeve": "Alternatives",
-      "benchmark": "Global Infra.",
-      "yield": 5.1,
-      "mer": null,
+      "ticker": "IDIV.B",
+      "name": "Manulife Smart International Dividend ETF (Unhedged)",
+      "yahooTicker": "IDIV.B.TO",
+      "sleeve": "Active Equity",
+      "benchmark": "MSCI EAFE",
+      "yield": 2.8,
+      "mer": 0.40,
       "distFreq": "Quarterly",
-      "distType": "Return of Capital",
+      "distType": "Foreign Income",
+      "inceptionNote": null,
       "calYear": {
-        "2024": 5.1,  "2023": 12.4, "2022": -14.8, "2021": 18.2, "2020": 4.5,
-        "2019": 31.5, "2018": -2.2, "2017": 17.8,  "2016": 12.5, "2015": 21.4
+        "2024": null, "2023": null, "2022": null, "2021": null, "2020": null,
+        "2019": null, "2018": null, "2017": null, "2016": null, "2015": null
       }
     },
     {
-      "ticker": "ZRE",
-      "name": "BMO Equal Weight REITs Index ETF",
+      "ticker": "RIGE",
+      "name": "Russell Investments Global Equity Pool ETF",
+      "yahooTicker": "RIGE.TO",
+      "sleeve": "Active Equity",
+      "benchmark": "MSCI World",
+      "yield": 1.5,
+      "mer": 0.55,
+      "distFreq": "Annual",
+      "distType": "Foreign Income",
+      "inceptionNote": "Cal year returns reflect Russell Investments Global Equity Pool — ETF launched August 2024",
+      "calYear": {
+        "2024": 24.55, "2023": 19.44, "2022": -10.43, "2021": 21.93, "2020": 11.18,
+        "2019": 19.01, "2018": -1.31, "2017": 14.59, "2016": 3.40, "2015": null
+      }
+    },
+    {
+      "ticker": "TQSM",
+      "name": "TD Q U.S. Small-Mid-Cap Equity ETF",
+      "yahooTicker": "TQSM.TO",
+      "sleeve": "Active Equity",
+      "benchmark": "Russell 2500",
+      "yield": 0.9,
+      "mer": 0.46,
+      "distFreq": "Annual",
+      "distType": "Foreign Income",
+      "inceptionNote": null,
+      "calYear": {
+        "2024": null, "2023": null, "2022": null, "2021": null, "2020": null,
+        "2019": null, "2018": null, "2017": null, "2016": null, "2015": null
+      }
+    },
+    {
+      "ticker": "MGQE",
+      "name": "Mackenzie GQE Global Equity ETF",
+      "yahooTicker": "MGQE.TO",
+      "sleeve": "Active Equity",
+      "benchmark": "MSCI World",
+      "yield": 0.5,
+      "mer": 0.55,
+      "distFreq": "Annual",
+      "distType": "Foreign Income",
+      "inceptionNote": "Cal year returns reflect underlying GQE Global Equity strategy prior to ETF launch",
+      "calYear": {
+        "2024": 32.95, "2023": 22.84, "2022": -13.03, "2021": 26.12, "2020": 5.53,
+        "2019": 16.46, "2018": -12.51, "2017": 22.43, "2016": -0.69, "2015": null
+      }
+    },
+    {
+      "ticker": "PFMN",
+      "name": "Picton Mahoney Fortified Market Neutral Alternative Fund",
+      "yahooTicker": "PFMN.TO",
       "sleeve": "Alternatives",
-      "benchmark": "FTSE Canada REIT",
+      "benchmark": "FTSE Canada 91 Day T-Bill",
+      "yield": 1.1,
+      "mer": 1.05,
+      "distFreq": "Annual",
+      "distType": "Capital Gains",
+      "inceptionNote": null,
+      "calYear": {
+        "2024": null, "2023": null, "2022": null, "2021": null, "2020": null,
+        "2019": null, "2018": null, "2017": null, "2016": null, "2015": null
+      }
+    },
+    {
+      "ticker": "BND",
+      "name": "Purpose Global Bond Fund ETF",
+      "yahooTicker": "BND.TO",
+      "sleeve": "Fixed Income",
+      "benchmark": "Bloomberg Global Aggregate",
       "yield": 4.2,
-      "mer": 0.61,
+      "mer": 0.45,
       "distFreq": "Monthly",
-      "distType": "Trust Income",
+      "distType": "Interest",
+      "inceptionNote": null,
       "calYear": {
-        "2024": 8.2,  "2023": 14.5, "2022": -19.8, "2021": 31.2, "2020": -6.5,
-        "2019": 21.4, "2018": -5.8, "2017": 8.1,   "2016": 20.5, "2015": -1.5
+        "2024": null, "2023": null, "2022": null, "2021": null, "2020": null,
+        "2019": null, "2018": null, "2017": null, "2016": null, "2015": null
       }
     },
     {
-      "ticker": "ALT1005",
-      "name": "Wealhouse Capital Amplus Fund",
-      "sleeve": "Mutual Funds",
-      "benchmark": "S&P/TSX Comp.",
-      "yield": 0,
-      "mer": 1.85,
-      "distFreq": "Annual",
-      "distType": "Capital Gains",
+      "ticker": "VCIP",
+      "name": "Vanguard Conservative Income ETF Portfolio",
+      "yahooTicker": "VCIP.TO",
+      "sleeve": "Fixed Income",
+      "benchmark": "Vanguard Conservative Income Blended",
+      "yield": 3.2,
+      "mer": 0.25,
+      "distFreq": "Monthly",
+      "distType": "Interest + Dividends",
+      "inceptionNote": null,
       "calYear": {
-        "2024": 14.8, "2023": 9.1,  "2022": -8.5,  "2021": 24.0, "2020": 8.5,
-        "2019": 18.5, "2018": -11.5,"2017": 11.5,  "2016": 10.8, "2015": 5.2
+        "2024": null, "2023": null, "2022": null, "2021": null, "2020": null,
+        "2019": null, "2018": null, "2017": null, "2016": null, "2015": null
       }
     },
     {
-      "ticker": "NEI640",
-      "name": "NEI Canadian Equity RS Fund",
-      "sleeve": "Mutual Funds",
-      "benchmark": "S&P/TSX Comp.",
-      "yield": 0.8,
-      "mer": 2.10,
-      "distFreq": "Annual",
-      "distType": "Capital Gains",
+      "ticker": "PMIF",
+      "name": "PIMCO Monthly Income Fund (Canada) ETF",
+      "yahooTicker": "PMIF.TO",
+      "sleeve": "Fixed Income",
+      "benchmark": "Bloomberg Global Aggregate",
+      "yield": 5.5,
+      "mer": 0.86,
+      "distFreq": "Monthly",
+      "distType": "Interest",
+      "inceptionNote": "Cal year returns reflect PIMCO Monthly Income Fund (Canada) mutual fund series",
       "calYear": {
-        "2024": 16.5, "2023": 10.8, "2022": -7.2,  "2021": 22.8, "2020": 5.5,
-        "2019": 20.5, "2018": -9.8, "2017": 10.2,  "2016": 19.5, "2015": -9.2
+        "2024": 5.07, "2023": 7.91, "2022": -6.62, "2021": 1.60, "2020": 4.18,
+        "2019": 7.08, "2018": 0.57, "2017": 6.89, "2016": 7.59, "2015": null
       }
     }
   ],
   "benchmarks": {
-    "S&P/TSX 60":          { "ytd": 3.8,  "1w": 0.40, "1m": 1.0,  "3m": 3.0,  "6m": 4.8,  "1y": 11.5, "3y": 8.0  },
-    "S&P/TSX Comp.":       { "ytd": 3.5,  "1w": 0.38, "1m": 0.95, "3m": 2.8,  "6m": 4.5,  "1y": 11.0, "3y": 7.8  },
-    "FTSE Canada AC":      { "ytd": 3.6,  "1w": 0.39, "1m": 0.97, "3m": 2.9,  "6m": 4.6,  "1y": 11.2, "3y": 7.9  },
-    "MSCI ACWI ex-CA":     { "ytd": 5.2,  "1w": 0.65, "1m": 2.1,  "3m": 6.1,  "6m": 8.5,  "1y": 18.2, "3y": 9.5  },
-    "FTSE Global AC":      { "ytd": 5.0,  "1w": 0.63, "1m": 2.0,  "3m": 6.0,  "6m": 8.3,  "1y": 17.9, "3y": 9.3  },
-    "Global Blend":        { "ytd": 4.5,  "1w": 0.55, "1m": 1.7,  "3m": 5.2,  "6m": 7.2,  "1y": 16.5, "3y": 8.8  },
-    "S&P 500 (CAD)":       { "ytd": 7.2,  "1w": 0.90, "1m": 3.1,  "3m": 8.5,  "6m": 11.2, "1y": 24.8, "3y": 11.5 },
-    "MSCI EAFE":           { "ytd": 4.1,  "1w": 0.50, "1m": 1.5,  "3m": 4.8,  "6m": 7.0,  "1y": 15.8, "3y": 7.2  },
-    "FTSE Canada Univ Bond":{ "ytd": 0.8, "1w": 0.05, "1m": 0.3,  "3m": 0.9,  "6m": 1.8,  "1y": 5.5,  "3y": 0.2  },
-    "FTSE Canada ST Bond":  { "ytd": 1.2, "1w": 0.08, "1m": 0.5,  "3m": 1.4,  "6m": 2.5,  "1y": 4.8,  "3y": 1.5  },
-    "S&P/TSX Energy":      { "ytd": 1.5,  "1w": 0.20, "1m": 0.5,  "3m": 1.8,  "6m": 3.2,  "1y": 7.5,  "3y": 15.8 },
-    "Global Energy":       { "ytd": 2.1,  "1w": 0.25, "1m": 0.8,  "3m": 2.5,  "6m": 4.1,  "1y": 9.2,  "3y": 12.5 },
-    "Multi-Asset Blend":   { "ytd": 2.8,  "1w": 0.30, "1m": 0.9,  "3m": 2.8,  "6m": 4.5,  "1y": 10.1, "3y": 6.8  },
-    "Global Infra.":       { "ytd": 3.5,  "1w": 0.42, "1m": 1.2,  "3m": 3.5,  "6m": 5.8,  "1y": 12.0, "3y": 7.5  },
-    "FTSE Canada REIT":    { "ytd": 4.2,  "1w": 0.55, "1m": 1.5,  "3m": 4.5,  "6m": 7.2,  "1y": 14.5, "3y": 2.8  }
+    "S&P/TSX Comp.":              { "ytd": null, "1w": null, "1m": null, "3m": null, "6m": null, "1y": null, "3y": null },
+    "S&P 500 (CAD Hedged)":       { "ytd": null, "1w": null, "1m": null, "3m": null, "6m": null, "1y": null, "3y": null },
+    "FTSE Developed ex NA":       { "ytd": null, "1w": null, "1m": null, "3m": null, "6m": null, "1y": null, "3y": null },
+    "FTSE Emerging Markets":      { "ytd": null, "1w": null, "1m": null, "3m": null, "6m": null, "1y": null, "3y": null },
+    "MSCI ACWI":                  { "ytd": null, "1w": null, "1m": null, "3m": null, "6m": null, "1y": null, "3y": null },
+    "MSCI World":                 { "ytd": null, "1w": null, "1m": null, "3m": null, "6m": null, "1y": null, "3y": null },
+    "MSCI EAFE":                  { "ytd": null, "1w": null, "1m": null, "3m": null, "6m": null, "1y": null, "3y": null },
+    "MSCI World Small Cap":       { "ytd": null, "1w": null, "1m": null, "3m": null, "6m": null, "1y": null, "3y": null },
+    "Russell 2500":               { "ytd": null, "1w": null, "1m": null, "3m": null, "6m": null, "1y": null, "3y": null },
+    "Bloomberg Global Aggregate": { "ytd": null, "1w": null, "1m": null, "3m": null, "6m": null, "1y": null, "3y": null },
+    "FTSE Canada 91 Day T-Bill":  { "ytd": null, "1w": null, "1m": null, "3m": null, "6m": null, "1y": null, "3y": null },
+    "Vanguard Conservative Income Blended": { "ytd": null, "1w": null, "1m": null, "3m": null, "6m": null, "1y": null, "3y": null }
   }
 }
