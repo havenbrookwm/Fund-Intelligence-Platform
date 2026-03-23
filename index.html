@@ -400,7 +400,11 @@ let sortKey = null, sortDir = -1;
 let expandedTicker = null;
 let customHoldings = [{ticker:'',weight:0},{ticker:'',weight:0},{ticker:'',weight:0}];
 
-const SLEEVE_CLASS = {'Canadian Equity':'CE','Global Equity':'GE','Fixed Income':'FI','Income ETF':'IE','Alternatives':'ALT','Mutual Funds':'MF'};
+const SLEEVE_CLASS = {
+  'Canadian Equity':'CE', 'Global Equity':'GE', 'Fixed Income':'FI',
+  'Income ETF':'IE', 'Alternatives':'ALT', 'Mutual Funds':'MF',
+  'Passive Equity':'CE', 'Active Equity':'GE',
+};
 const CAL_YEARS = [2024,2023,2022,2021,2020,2019,2018,2017,2016,2015];
 const CUM_COLS = [
   {key:'on','label':'ON',tip:'Overnight'},
@@ -473,12 +477,14 @@ function hideLoadingScreen() {
 
 // Sanity bounds by sleeve — anything outside these is treated as bad data
 const SANITY = {
-  'Canadian Equity': {on:[-5,5],   '1w':[-10,10],  '1m':[-15,15],  '3m':[-30,30],  '6m':[-40,40],  ytd:[-50,60],  '1y':[-50,70],  '3y':[-20,30]},
-  'Global Equity':   {on:[-5,5],   '1w':[-10,10],  '1m':[-15,15],  '3m':[-30,30],  '6m':[-40,40],  ytd:[-50,70],  '1y':[-50,80],  '3y':[-20,35]},
-  'Fixed Income':    {on:[-2,2],   '1w':[-5,5],    '1m':[-8,8],    '3m':[-15,15],  '6m':[-20,20],  ytd:[-20,20],  '1y':[-20,20],  '3y':[-15,15]},
-  'Income ETF':      {on:[-6,6],   '1w':[-12,12],  '1m':[-20,20],  '3m':[-35,50],  '6m':[-45,60],  ytd:[-60,80],  '1y':[-60,80],  '3y':[-25,50]},
-  'Alternatives':    {on:[-5,5],   '1w':[-10,10],  '1m':[-15,20],  '3m':[-30,40],  '6m':[-40,50],  ytd:[-50,60],  '1y':[-50,70],  '3y':[-20,35]},
-  'Mutual Funds':    {on:[-5,5],   '1w':[-10,10],  '1m':[-15,15],  '3m':[-30,30],  '6m':[-40,40],  ytd:[-50,60],  '1y':[-50,70],  '3y':[-20,30]},
+  'Canadian Equity':  {on:[-5,5],   '1w':[-10,10],  '1m':[-15,15],  '3m':[-30,30],  '6m':[-40,40],  ytd:[-50,60],  '1y':[-50,70],  '3y':[-20,30]},
+  'Passive Equity':   {on:[-5,5],   '1w':[-10,10],  '1m':[-15,15],  '3m':[-30,30],  '6m':[-40,40],  ytd:[-50,70],  '1y':[-50,80],  '3y':[-20,35]},
+  'Active Equity':    {on:[-6,6],   '1w':[-12,12],  '1m':[-20,20],  '3m':[-35,35],  '6m':[-45,55],  ytd:[-60,120], '1y':[-60,120], '3y':[-25,50]},
+  'Global Equity':    {on:[-5,5],   '1w':[-10,10],  '1m':[-15,15],  '3m':[-30,30],  '6m':[-40,40],  ytd:[-50,70],  '1y':[-50,80],  '3y':[-20,35]},
+  'Fixed Income':     {on:[-2,2],   '1w':[-5,5],    '1m':[-8,8],    '3m':[-15,15],  '6m':[-20,20],  ytd:[-20,20],  '1y':[-20,20],  '3y':[-15,15]},
+  'Income ETF':       {on:[-6,6],   '1w':[-12,12],  '1m':[-20,20],  '3m':[-35,50],  '6m':[-45,60],  ytd:[-60,80],  '1y':[-60,80],  '3y':[-25,50]},
+  'Alternatives':     {on:[-5,5],   '1w':[-10,10],  '1m':[-15,20],  '3m':[-30,40],  '6m':[-40,50],  ytd:[-50,60],  '1y':[-50,70],  '3y':[-20,35]},
+  'Mutual Funds':     {on:[-5,5],   '1w':[-10,10],  '1m':[-15,15],  '3m':[-30,30],  '6m':[-40,40],  ytd:[-50,60],  '1y':[-50,70],  '3y':[-20,30]},
 };
 const DEFAULT_SANITY = {on:[-10,10],'1w':[-20,20],'1m':[-30,30],'3m':[-50,50],'6m':[-60,60],ytd:[-70,80],'1y':[-70,80],'3y':[-30,40]};
 
@@ -489,16 +495,36 @@ function isValid(val, sleeve, period) {
 }
 
 async function fetchYahoo(fund) {
-  const suffix = ['BIP.UN','ALT1005','NEI640'].includes(fund.ticker) ? '' : '.TO';
-  const yahooTicker = fund.ticker + suffix;
-  const period1 = Math.floor(Date.now()/1000) - 86400 * 400; // ~13 months of data
-  const url = `https://query1.finance.yahoo.com/v8/finance/chart/${yahooTicker}?interval=1d&period1=${period1}&period2=9999999999`;
+  // Use yahooTicker from JSON if available, otherwise construct it
+  const primaryTicker = fund.yahooTicker || (fund.ticker + '.TO');
+  const period1 = Math.floor(Date.now()/1000) - 86400 * 400;
 
-  const r = await fetch(url, {signal: AbortSignal.timeout(8000)});
-  if (!r.ok) throw new Error(`HTTP ${r.status}`);
-  const d = await r.json();
-  const result = d?.chart?.result?.[0];
-  if (!result) throw new Error('No result');
+  // Build list of tickers to try in order
+  const tickersToTry = [primaryTicker];
+  // If primary is .NE, also try .CN as fallback (Cboe Canada)
+  if (primaryTicker.endsWith('.NE')) tickersToTry.push(primaryTicker.replace('.NE', '.CN'));
+  // If primary is .CN, also try .NE
+  if (primaryTicker.endsWith('.CN')) tickersToTry.push(primaryTicker.replace('.CN', '.NE'));
+  // If ticker has a dot in it (e.g. IDIV.B), also try with hyphen (IDIV-B)
+  if (primaryTicker.includes('.') && !primaryTicker.endsWith('.TO') && !primaryTicker.endsWith('.NE') && !primaryTicker.endsWith('.CN')) {
+    tickersToTry.push(primaryTicker.replace(/\.(?=[^.]*$)/, '-'));
+  }
+
+  let result = null;
+  let lastError = null;
+  for (const yahooTicker of tickersToTry) {
+    try {
+      const url = `https://query1.finance.yahoo.com/v8/finance/chart/${yahooTicker}?interval=1d&period1=${period1}&period2=9999999999`;
+      const r = await fetch(url, {signal: AbortSignal.timeout(8000)});
+      if (!r.ok) throw new Error(`HTTP ${r.status}`);
+      const d = await r.json();
+      result = d?.chart?.result?.[0];
+      if (result) break; // success — stop trying
+    } catch(e) {
+      lastError = e;
+    }
+  }
+  if (!result) throw new Error(lastError?.message || 'No result');
 
   const closes = result?.indicators?.quote?.[0]?.close || [];
   const timestamps = result?.timestamp || [];
